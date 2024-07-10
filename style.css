@@ -2,13 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-
     background-color: #006769;
-    /* padding: 0px 100px; */
 }
 
 main {
@@ -39,84 +37,78 @@ main {
     padding: 10px;
 }
 
-
-  
-  .flip-card-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    /* text-align: center; */
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10%;
-    
-  }
-  
-  .flip-card:hover .flip-card-inner {
+}
+
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
+}
+
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 10px;
-  }
-  
-  .flip-card-front {
+}
+
+.flip-card-front {
     background-color: #9DDE8B;
     color: black;
     border-radius: 10px;
-  }
-  
-  .flip-card-back {
+}
+
+.flip-card-back {
     background-color: #E6FF94;
     color: black;
     transform: rotateY(180deg);
     border-radius: 10px;
-    padding:10px 0px 0px 15px;
-  }
-  h3
-  {
-    padding: 0px 20px;
-  }
-  span
-  {
-    padding: 0px 20px;
-  }
+    padding: 10px 0 0 15px;
+}
 
-  header{
+h3 {
+    padding: 0 20px;
+}
+
+span {
+    padding: 0 20px;
+}
+
+header {
     margin-bottom: 2rem;
     text-align: center;
 }
+
 header h1 {
     filter: drop-shadow(21px 10px 3px black);
     color: #E6FF94;
     font-size: 3rem;
     font-weight: 900;
     margin: 1rem 0;
-  
 }
-header input{
+
+header input {
     width: 500px;
     padding: 6px 12px;
     border-radius: 0.5rem;
     border: 2px solid #f1f1f1;
     font-size: 16px;
 }
-header select
-{
+
+header select {
     width: 155px;
     padding: 6px 12px;
     border-radius: 0.5rem;
     border: 2px solid #f1f1f1;
     font-size: 16px;
-
 }
-
 
 #loadMore {
     display: block;
@@ -128,34 +120,43 @@ header select
     border-radius: 10px;
     cursor: pointer;
 }
-  #loadMore:hover {
-    background-color:#FF5F00;
+
+#loadMore:hover {
+    background-color: #FF5F00;
 }
 
-  @media screen and (max-width: 1200px) {
+/* Media Queries */
+@media (max-width: 1200px) {
     .flip-card {
-      width: 30%; 
+        width: 30%;
     }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .flip-card {
-      width: 45%; 
-    }
-  }
+}
 
-@media screen and (max-width: 768px) {
+@media (max-width: 900px) {
     .flip-card {
-      width: 48%;
-      height: 350px;
-      padding: 10px;
+        width: 45%;
     }
-  }
-  
-  @media screen and (max-width: 576px) {
+
+    header input {
+        width: 70%;
+    }
+
+    header select {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
     .flip-card {
-      width: 100%; 
-      height: 300px;
-      /* padding: 0 0 0 10px;      */
+        width: 90%;
     }
-  }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header input, header select {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
