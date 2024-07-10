@@ -97,14 +97,14 @@ function showData(finalData) {
 function searchPokemon(e) {
   if (e.target.value.length === 0) {
     showData(finalData);
-  } else {
-    //make copy of the pokemons displayed on screen
+  }
+   else {
     let forSearching = finalData;
-    // find the searchterm in that copy
+
     forSearching = forSearching.filter((obj) =>
       obj.name.includes(e.target.value)
     );
-    //display pokemons matching the searchterm
+    
     showData(forSearching);
   }
 }
@@ -113,13 +113,13 @@ function filterPokemon(e) {
   const type = e.target.value;
   if (type === "all") showData(finalData);
   else {
-    //make copy of the pokemons displayed on screen
+    
     let forSearching = finalData;
-    // find the searchterm in that copy
+    
     forSearching = forSearching.filter((obj) =>
       obj.types[0].type.name.includes(type)
     );
-    //display pokemons matching the searchterm
+    
     showData(forSearching);
   }
 }
